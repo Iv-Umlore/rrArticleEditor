@@ -31,11 +31,12 @@ namespace ArticleEditor
             HrCommand = new HrCommand(view.doc);
             HashCommand = new BaseCommands(view.doc, "#");
             UrlCommand = new UrlCommand(view.doc);
-            AudioCommand = new BaseCommands(view.doc,"audio");
+            AudioCommand = new BaseCommands(view.doc, "audio");
             SizeCommand = new SizeCommand(view.doc);
             VoteHeaderOpenCommand = new BaseCommands(view.doc, "vote");
             VoteHeaderAnonCommand = new BaseCommands(view.doc, "votea");
             VoteVariantCommand = new BaseCommands(view.doc, "v");
+            ColorCommand = new ColorCommand(view.doc);
         }
 
         public BaseCommands BoldCommand { get; set; }
@@ -59,5 +60,6 @@ namespace ArticleEditor
         public BaseCommands VoteHeaderOpenCommand { get; }
         public BaseCommands VoteHeaderAnonCommand { get; }
         public BaseCommands VoteVariantCommand { get; }
+        public ColorCommand ColorCommand { get; }
     }
 }

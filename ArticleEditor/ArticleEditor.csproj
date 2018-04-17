@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ColorCommand.cs" />
     <Compile Include="Commands\HrCommand.cs" />
     <Compile Include="TextBoxExtension.cs" />
     <Compile Include="Commands\SizeCommand.cs" />

@@ -20,9 +20,16 @@ namespace ArticleEditor
                 doc.SelectedText = string.Format("[{0}={1}]-текст-[/{0}]", "url", doc.SelectedText.Trim());
                 doc.SelectText("-текст-");
             }
-            else
+            else if (doc.SelectedText.Length>0)
             {
                 doc.SelectedText = string.Format("[{0}=-ссылка-]{1}[/{0}]", "url", doc.SelectedText.Trim());
+                doc.SelectText("-ссылка-");
+
+            }
+            else
+            {
+
+                doc.SelectedText = string.Format("[{0}=-ссылка-]название[/{0}]", "url");
                 doc.SelectText("-ссылка-");
             }
         }
